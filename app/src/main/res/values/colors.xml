@@ -3,4 +3,14 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="btn_principal">#00386C</color>
+    <color name="txt_btn_principal">#232323</color>
+    <color name="fundo_tela">#DBFFFFFF</color>
+    <color name="toobar">#186096</color>
+    <color name="fundo_tela_cards">#F1F1F1</color>
+    <color name="fundo_cards">#FFFFFF</color>
+    <color name="fundo_tela_splash">#053F6A</color>
+
 </resources>

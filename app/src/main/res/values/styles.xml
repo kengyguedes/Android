@@ -8,4 +8,46 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+
+    <style name="Style_CardView" >
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:elevation">20dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:radius">10dp</item>
+        <item name="android:background">@color/fundo_cards</item>
+        <item name="android:layout_margin">6dp</item>
+
+    </style>
+
+    <style name="Style_ImageView" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="Style_TextView" >
+
+        <item name="android:layout_width">match_parent</item>
+       <!-- <item name="android:textColorTertiary">@color/ic_txt_ativo_bottom</item>-->
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+
+
+    </style>
 </resources>

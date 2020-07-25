@@ -8,6 +8,7 @@
 
 
     <androidx.cardview.widget.CardView
+        style="@style/Style_CardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -20,20 +21,21 @@
 
             <TextView
                 android:id="@+id/lbl_titulo_cliente"
+                style="@style/Style_txt_dados_clientes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:text="Dados do Cliente"
+                android:textSize="16dp"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/txt_nome_cliente"
+                style="@style/Style_txt_dados_clientes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/santral_bold"
-                style="@style/Style_txt_dados_clientes"
-                android:textSize="13sp"
                 android:text="40.795 - A E D REMEDIOS E PERFUMARIA  - EIRELEI -M"
+                android:textSize="13sp"
                 app:layout_constraintTop_toBottomOf="@id/Divisor2" />
 
             <TextView
@@ -44,8 +46,8 @@
                 app:layout_constraintTop_toBottomOf="@id/txt_nome_cliente" />
 
             <TextView
-                style="@style/Style_lbl_dados_clientes"
                 android:id="@+id/lbl_cpf"
+                style="@style/Style_lbl_dados_clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CPF: "
@@ -54,17 +56,17 @@
 
             <TextView
                 android:id="@+id/txt_cpf"
+                style="@style/Style_txt_dados_clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="039.039.039-61"
-                style="@style/Style_txt_dados_clientes"
                 app:layout_constraintBottom_toBottomOf="@id/lbl_cpf"
                 app:layout_constraintStart_toEndOf="@id/lbl_cpf"
                 app:layout_constraintTop_toTopOf="@+id/lbl_cpf" />
 
             <TextView
-                style="@style/Style_lbl_dados_clientes"
                 android:id="@+id/lbl_cnpj"
+                style="@style/Style_lbl_dados_clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CNPJ: "
@@ -74,18 +76,18 @@
 
             <TextView
                 android:id="@+id/txt_cnpj"
+                style="@style/Style_txt_dados_clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10.766.206/0001-10"
-                style="@style/Style_txt_dados_clientes"
                 app:layout_constraintBottom_toBottomOf="@id/lbl_cnpj"
                 app:layout_constraintStart_toEndOf="@id/lbl_cnpj"
                 app:layout_constraintTop_toTopOf="@+id/lbl_cnpj" />
 
 
             <TextView
-                style="@style/Style_lbl_dados_clientes"
                 android:id="@+id/lbl_ramo_atividade"
+                style="@style/Style_lbl_dados_clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ramo de atividade: "
@@ -94,17 +96,17 @@
 
             <TextView
                 android:id="@+id/txt_ramo_atividade"
+                style="@style/Style_txt_dados_clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Panificadora"
-                style="@style/Style_txt_dados_clientes"
                 app:layout_constraintBottom_toBottomOf="@id/lbl_ramo_atividade"
                 app:layout_constraintStart_toEndOf="@id/lbl_ramo_atividade"
                 app:layout_constraintTop_toTopOf="@+id/lbl_ramo_atividade" />
 
             <TextView
-                style="@style/Style_lbl_dados_clientes"
                 android:id="@+id/lbl_endereco"
+                style="@style/Style_lbl_dados_clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Endereço: "
@@ -114,10 +116,10 @@
 
             <TextView
                 android:id="@+id/txt_endereco"
+                style="@style/Style_txt_dados_clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ROD BR-060 KM 388 SN"
-                style="@style/Style_txt_dados_clientes"
                 app:layout_constraintBottom_toBottomOf="@id/lbl_endereco"
                 app:layout_constraintStart_toEndOf="@id/lbl_endereco"
                 app:layout_constraintTop_toTopOf="@+id/lbl_endereco" />
@@ -136,6 +138,7 @@
 
 
     <androidx.cardview.widget.CardView
+        style="@style/Style_CardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -149,13 +152,13 @@
 
             <TextView
                 android:id="@+id/lbl_titulo_contatos"
-                style="@style/Style_lbl_dados_clientes"
+                style="@style/Style_txt_dados_clientes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:text="Contatos"
-                android:textSize="17dp"
+                android:textSize="16dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -569,23 +572,23 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        style="@style/Style_CardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       android:backgroundTint="@color/btn_verificar_status_cliente">
+        android:backgroundTint="@color/btn_verificar_status_cliente">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="40dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/santral_bold"
                 android:text="Verificar status do cliente"
-
-                android:layout_centerHorizontal="true"
-                />
+                android:textColor="@color/txt_btn_verificar_status_cliente" />
         </RelativeLayout>
-
 
 
     </androidx.cardview.widget.CardView>

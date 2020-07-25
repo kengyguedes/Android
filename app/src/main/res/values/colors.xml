@@ -14,5 +14,8 @@
     <color name="fundo_tela_splash">#053F6A</color>
     <color name="btn_verificar_status_cliente">#638735</color>
     <color name="bottom_nav_background"> #186096</color>
+    <color name="txt_btn_verificar_status_cliente">#FFFFFF</color>
+    <color name="lbl_card_menu_principal">#232323</color>
+    <color name="status_bar_background">#00386C</color>
 
 </resources>

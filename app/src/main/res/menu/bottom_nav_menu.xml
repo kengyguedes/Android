@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/navigation_dados"
-        android:icon="@mipmap/ic_maxima_alvara_inativo"
+        android:icon="@mipmap/ic_maxima_pessoa_ativo"
         android:title="@string/title_dados" />
 
     <item

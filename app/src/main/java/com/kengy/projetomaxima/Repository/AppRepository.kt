@@ -28,11 +28,6 @@ class AppRepository() {
                     Log.d("sucesso", "Requisição sucesso")
                     var listPed = response.body()?.pedidos
                     listHistPedo.value= response.body()?.pedidos
-                    listHistPedo.value = listPed
-                    var teste = 10
-
-                    teste+=5
-
 
                    /* resultado?.let {
                         it.forEach{

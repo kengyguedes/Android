@@ -12,5 +12,7 @@
     <color name="fundo_tela_cards">#F1F1F1</color>
     <color name="fundo_cards">#FFFFFF</color>
     <color name="fundo_tela_splash">#053F6A</color>
+    <color name="btn_verificar_status_cliente">#638735</color>
+    <color name="bottom_nav_background"> #186096</color>
 
 </resources>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+
+    <ImageView
+        android:id="@+id/img_letra"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_critica"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@mipmap/ic_maxima_critica_alerta"
+        app:layout_constraintBottom_toBottomOf="@id/lbo_critica"
+        app:layout_constraintStart_toEndOf="@+id/lbo_critica"
+        app:layout_constraintTop_toTopOf="@id/lbo_critica" />
+
+
+    <ImageView
+        android:id="@+id/img_legenda_corte"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="10dp"
+        android:src="@mipmap/ic_maxima_legenda_corte"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/txt_vlr_pedido"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_cliente" />
+
+    <ImageView
+        android:id="@+id/img_legenda_falta"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="7dp"
+        android:src="@mipmap/ic_maxima_legenda_corte"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/txt_vlr_pedido"
+        app:layout_constraintEnd_toStartOf="@id/img_legenda_corte"
+        app:layout_constraintTop_toTopOf="@id/txt_cliente" />
+
+    <ImageView
+        android:id="@+id/img_legenda_cancelado"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="7dp"
+        android:src="@mipmap/ic_maxima_legenda_corte"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/txt_vlr_pedido"
+        app:layout_constraintEnd_toStartOf="@id/img_legenda_falta"
+        app:layout_constraintTop_toTopOf="@id/txt_cliente" />
+
+    <ImageView
+        android:id="@+id/img_legenda_devolucao"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="7dp"
+        android:src="@mipmap/ic_maxima_legenda_corte"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/txt_vlr_pedido"
+        app:layout_constraintEnd_toStartOf="@id/img_legenda_cancelado"
+        app:layout_constraintTop_toTopOf="@id/txt_cliente" />
+
+    <ImageView
+        android:id="@+id/img_legenda_telemark"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="7dp"
+        android:src="@mipmap/ic_maxima_legenda_corte"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/txt_vlr_pedido"
+        app:layout_constraintEnd_toStartOf="@id/img_legenda_devolucao"
+        app:layout_constraintTop_toTopOf="@id/txt_cliente" />
+
+    <TextView
+        android:id="@+id/lbl_numped_rca_erp"
+        style="@style/Style_lbl_adapter_pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N/ Ped. RCA/ERP: "
+        app:layout_constraintStart_toEndOf="@id/img_letra"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txt_numped_rca_erp"
+        style="@style/Style_txt_adapter_pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="654654654 / 546546546 "
+        app:layout_constraintBottom_toBottomOf="@id/lbl_numped_rca_erp"
+        app:layout_constraintStart_toEndOf="@id/lbl_numped_rca_erp"
+        app:layout_constraintTop_toTopOf="@id/lbl_numped_rca_erp" />
+
+    <TextView
+        android:id="@+id/lbl_cliente"
+        style="@style/Style_lbl_adapter_pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cliente: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_letra"
+        app:layout_constraintTop_toBottomOf="@id/lbl_numped_rca_erp" />
+
+    <TextView
+        android:id="@+id/txt_cliente"
+        style="@style/Style_txt_adapter_pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="848.246 - A F DA SILVA TUCUMA"
+        app:layout_constraintBottom_toBottomOf="@id/lbl_cliente"
+        app:layout_constraintStart_toEndOf="@id/lbl_cliente"
+        app:layout_constraintTop_toTopOf="@id/lbl_cliente" />
+
+    <TextView
+        android:id="@+id/txt_status"
+        style="@style/Style_txt_adapter_pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Em Processamento"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintStart_toEndOf="@id/img_letra"
+        app:layout_constraintTop_toBottomOf="@id/lbl_cliente" />
+
+
+    <TextView
+        android:id="@+id/lbo_critica"
+        style="@style/Style_lbl_adapter_pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="230dp"
+        android:text="Crítica: "
+        app:layout_constraintBottom_toBottomOf="@id/txt_status"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_status" />
+
+    <TextView
+        android:id="@+id/txt_vlr_pedido"
+        style="@style/Style_txt_adapter_pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="560,00"
+        app:layout_constraintBottom_toBottomOf="@id/txt_status"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_status" />
+
+    <TextView
+        android:id="@+id/txt_data_pedido"
+        style="@style/Style_txt_adapter_pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="17 Ago"
+        app:layout_constraintBottom_toBottomOf="@id/txt_numped_rca_erp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_numped_rca_erp" />
+
+    <View
+        android:id="@+id/Divisor1"
+        android:layout_width="wrap_content"
+        android:layout_height="2dip"
+        android:background="#A8A8A8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_letra" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

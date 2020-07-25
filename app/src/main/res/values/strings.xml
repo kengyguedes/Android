@@ -8,4 +8,11 @@
     <string name="resumo_venda">Resumo de Vendas</string>
     <string name="pedidos">Pedidos</string>
     <string name="clientes">Clientes</string>
+    <string name="title_activity_botton_nav_client">BottonNavClient</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_dados">Dados</string>
+    <string name="title_hist_pedidos">Hist. Pedidos</string>
+    <string name="title_alvaras">Alvarás</string>
 </resources>

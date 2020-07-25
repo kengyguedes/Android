@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dados">
+
+    <fragment
+        android:id="@+id/navigation_dados"
+        android:name="com.kengy.projetomaxima.View.ui.dados_cliente.DadosClienteFragment"
+        android:label="@string/title_dados"
+        tools:layout="@layout/fragment_dados_cliente" />
+
+    <fragment
+        android:id="@+id/navigation_hist_ped"
+        android:name="com.kengy.projetomaxima.View.ui.historico_pedidos.HistPedidosFragment"
+        android:label="@string/title_hist_pedidos"
+        tools:layout="@layout/fragment_hist_pedidos" >
+        <action
+            android:id="@+id/action_navigation_hist_ped_to_navigation_dados"
+            app:destination="@id/navigation_dados"
+            app:launchSingleTop="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_alvaras"
+        android:name="com.kengy.projetomaxima.View.ui.alvaras.AlvarasFragment"
+        android:label="@string/title_alvaras"
+        tools:layout="@layout/fragment_alvaras" >
+        <action
+            android:id="@+id/action_navigation_alvaras_to_navigation_hist_ped"
+            app:destination="@id/navigation_hist_ped" />
+    </fragment>
+</navigation>

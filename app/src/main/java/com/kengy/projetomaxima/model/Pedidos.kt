@@ -1,6 +1,6 @@
 package com.kengy.projetomaxima.model
 
-class Pedido(
+class Pedidos(
 
     var numero_ped_Rca: Int,
     var numero_ped_erp: String,
@@ -13,5 +13,7 @@ class Pedido(
     var legendas: List<String>
 )
 
-data class MyPedido (var pedidos: List<Pedido>)
+data class MyPedido(
+    var pedidos: List<Pedidos>
+)
 

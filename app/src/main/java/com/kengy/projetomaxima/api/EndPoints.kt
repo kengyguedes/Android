@@ -1,6 +1,7 @@
 package com.kengy.projetomaxima.api
 
 import com.kengy.projetomaxima.model.Cliente
+import com.kengy.projetomaxima.model.MyCliente
 import com.kengy.projetomaxima.model.MyPedido
 import com.kengy.projetomaxima.model.Pedidos
 import retrofit2.Call
@@ -14,7 +15,7 @@ interface EndPoints {
     fun getAllPed(): Call<MyPedido>
 
     @GET("cliente")
-    fun getAllCli(): Call<List<Cliente>>
+    fun getAllCli(): Call<MyCliente>
 
 
 }

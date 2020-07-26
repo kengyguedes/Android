@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_tela_cards"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/ly_dados_cli">
+
 
 
     <androidx.cardview.widget.CardView
@@ -572,6 +574,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/btn_verificar_status_cli"
         style="@style/Style_CardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

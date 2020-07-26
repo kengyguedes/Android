@@ -3,11 +3,16 @@ package com.kengy.projetomaxima.View.ui.dados_cliente
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.kengy.projetomaxima.Repository.RepositoryCliente
 
 class DadosClienteViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    private val _repositoryCli =  RepositoryCliente()
+    init {
+        getClienteFromServer()
     }
-    val text: LiveData<String> = _text
+
+    fun  getClienteFromServer() = _repositoryCli.getClienteFromServer()
+
+    fun  getCliente() = _repositoryCli.listCliente
 }

@@ -1,9 +1,13 @@
 package com.kengy.projetomaxima.View
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -11,6 +15,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.kengy.projetomaxima.R
 
 class BottonNavClient : AppCompatActivity(){
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,4 +34,12 @@ class BottonNavClient : AppCompatActivity(){
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+
+
+
+
+
+
+
 }

@@ -1,16 +1,22 @@
 package com.kengy.projetomaxima.utils
 
+import android.content.Context
 import android.graphics.Color
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
+import android.os.Build
 import android.view.View
 import android.widget.ImageView
+import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat.getSystemService
 import com.amulyakhare.textdrawable.TextDrawable
 import com.google.android.material.snackbar.Snackbar
+import com.kengy.projetomaxima.R
 import kotlinx.android.synthetic.main.fragment_dados_cliente.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-object Utils {
-
+class Utils {
 
     fun formatterDate(strDate: String): String {
 
@@ -20,7 +26,7 @@ object Utils {
         val data = strDate.substring(0..9)
         val hora = strDate.substring(11..15)
 
-        val formatoDataAtual: SimpleDateFormat = SimpleDateFormat("yyyy-mm-dd")
+        val formatoDataAtual = SimpleDateFormat("yyyy-mm-dd")
         val dataAtual = Date()
         val dataFormated = formatoDataAtual.format(dataAtual)
 
@@ -42,13 +48,12 @@ object Utils {
 
         view.setImageDrawable(drawable)
 
-
     }
 
 
     fun hexConverterToColor(hex: String): Int {
 
-        var color = Color.parseColor(hex)
+        val color = Color.parseColor(hex)
         return color
     }
 
@@ -58,12 +63,14 @@ object Utils {
             "$date - $status ", // Message to show
             Snackbar.LENGTH_LONG //
         ).setAction( // Set an action for snack bar
-            "FECHAR", // Action button text
-            {
-                v.setBackgroundColor(Color.parseColor("#f2f2f2"))
-            }).show() // Finally show the snack bar
+            "FECHAR" // Action button text
+        ) {
+            v.setBackgroundColor(Color.parseColor("#f2f2f2"))
+        }.show() // Finally show the snack bar
 
     }
+
+
 
 
 }

@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.fragment_dados_cliente.*
 class DadosClienteFragment : Fragment() {
 
     private lateinit var dadosClienteViewModel: DadosClienteViewModel
+    val utils = Utils()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,7 +40,7 @@ class DadosClienteFragment : Fragment() {
         val status  = "Status ativo"
 
         btn_verificar_status_cli.setOnClickListener{
-          Utils.showSnackBarStausCli(ly_dados_cli,date,status)
+          utils.showSnackBarStausCli(ly_dados_cli,date,status)
         }
     }
 }

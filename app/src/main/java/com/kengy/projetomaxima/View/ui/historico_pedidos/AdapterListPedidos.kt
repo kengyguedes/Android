@@ -33,7 +33,7 @@ class AdapterListPedidos(private val pedidos: List<Pedidos>) :
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-
+        val utils = Utils()
 
         fun bindData(pedido: Pedidos) {
 
@@ -99,7 +99,8 @@ class AdapterListPedidos(private val pedidos: List<Pedidos>) :
             }
 
 
-            itemView.txt_data_pedido.text = Utils.formatterDate(pedido.data)
+
+            itemView.txt_data_pedido.text = utils.formatterDate(pedido.data)
 
 
         }

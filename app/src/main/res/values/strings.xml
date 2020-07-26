@@ -15,4 +15,6 @@
     <string name="title_dados">Dados</string>
     <string name="title_hist_pedidos">Hist. Pedidos</string>
     <string name="title_alvaras">Alvarás</string>
+    <string name="channel_name">Serviço Máxima</string>
+    <string name="channel_description">DESCRIÇÃO DO CANAL</string>
 </resources>

@@ -8,12 +8,12 @@
 
     <item
         android:id="@+id/navigation_hist_ped"
-        android:icon="@mipmap/ic_maxima_historico_pedidos_inativo"
+        android:icon="@mipmap/ic_maxima_historico_pedidos_ativo"
         android:title="@string/title_hist_pedidos" />
 
     <item
         android:id="@+id/navigation_alvaras"
-        android:icon="@mipmap/ic_maxima_pessoa_inativo"
+        android:icon="@mipmap/ic_maxima_alvara_ativo"
         android:title="@string/title_alvaras" />
 
 </menu>

@@ -3,6 +3,7 @@ package com.kengy.projetomaxima.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.kengy.projetomaxima.database.entity.EntityCliente
 
 @Entity(tableName = "mxsclientess")
 data class Cliente (
@@ -28,5 +29,5 @@ data class Cliente (
 )
 
 data class MyCliente(
-    var cliente : Cliente
+    var cliente : EntityCliente
 )

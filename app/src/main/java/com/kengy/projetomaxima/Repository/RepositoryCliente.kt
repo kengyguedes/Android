@@ -9,7 +9,7 @@ import com.kengy.projetomaxima.database.MaxDataBase
 import com.kengy.projetomaxima.database.entity.ClienteWithContatos
 import com.kengy.projetomaxima.database.entity.EntityCliente
 import com.kengy.projetomaxima.database.entity.EntityContato
-import com.kengy.projetomaxima.model.Cliente
+import com.kengy.projetomaxima.model.Contatos
 import com.kengy.projetomaxima.model.MyCliente
 import org.jetbrains.anko.doAsync
 import retrofit2.Call
@@ -19,7 +19,7 @@ import retrofit2.Response
 class RepositoryCliente(context: Context) {
 
 
-    val listCliente = MutableLiveData<Cliente>()
+    val listCliente = MutableLiveData<EntityCliente>()
     private var _dao = MaxDataBase.getInstance(context)
 
     fun getClienteFromServer() {
@@ -33,13 +33,10 @@ class RepositoryCliente(context: Context) {
                     Log.d("sucesso", "Requisição sucesso")
                     listCliente.value = response.body()?.cliente
 
-//                    response.let {
-//                        it.forEach {
-//                            doAsync {
-//                                _dao.Dao().savePedi(it)
-//                            }
-//                        }
-//                    }
+                    addClientesBD(
+                        response.body()!!.cliente
+                    )
+
                 }
 
             }
@@ -55,9 +52,21 @@ class RepositoryCliente(context: Context) {
     fun getClientesFromBD(): LiveData<List<ClienteWithContatos>> =
         _dao.Dao().getClienteWithContato()
 
-    fun addClientesBD(cliente: EntityCliente, listaContatos: List<EntityContato>) {
+    fun addClientesBD(cliente: EntityCliente) {
+        val lstAux = mutableListOf<EntityContato>()
+
+        cliente.listContato?.forEach {
+
+            lstAux.add(
+                EntityContato(
+                    it.nome, it.telefone, it.celular, it.conjuge, it.tipo, it.time,
+                    it.e_mail, it.data_nascimento, it.dataNascimentoConjuge, cliente.id
+                )
+            )
+        }
+
         doAsync {
-            _dao.Dao().gravaClientesBanco(cliente, listaContatos)
+            _dao.Dao().gravaClientesBanco(cliente, lstAux)
         }
     }
 }

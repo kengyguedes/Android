@@ -23,9 +23,6 @@ object Utils {
 
     fun formatterDate(strDate: String): String {
 
-        //   var srtFormated =  strDate.replace("T"," ").replaceRange(19..23,"") "2018-09-11T12:30:19-0300"
-        //   val date = LocalDate.parse(srtFormated, DateTimeFormatter.ISO_OFFSET_DATE_TIME)
-
         val data = strDate.substring(0..9)
         val hora = strDate.substring(11..15)
 
@@ -37,6 +34,17 @@ object Utils {
             return hora
 
         return data
+
+    }
+
+
+    fun getDate(): String {
+
+        val formatoDataAtual = SimpleDateFormat("yyyy-mm-dd")
+        val dataAtual = Date()
+        val dataFormated = formatoDataAtual.format(dataAtual)
+
+        return dataFormated
 
     }
 

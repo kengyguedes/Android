@@ -6,11 +6,6 @@ import com.kengy.projetomaxima.database.entity.EntityPedido
 
 object DadosMock {
 
-/*
-    listOf(
-    "PEDIDO_SOFREU_CORTE", "PEDIDO_FEITO_TELEMARKETING"
-    )*/
-
     val contato: List<EntityContato> = mutableListOf(
 
         EntityContato(
@@ -23,7 +18,7 @@ object DadosMock {
             "gean.paiva@maximasistemas.com.br",
             "1992-12-11",
             "1992-12-11",
-            "30987"
+           1
         )
     )
 
@@ -119,20 +114,7 @@ object DadosMock {
             "10.766.206/002-61",
             "Sistemas",
             "Avenida 136 - Setor Sul - Goiânia/Goiás",
-            "Indefinido"/*,
-            mutableListOf(
-                EntityContato(
-                    "Gean Delon",
-                    "3333-3365",
-                    "62988889888",
-                    "Maria sem dente",
-                    "Sócio",
-                    "Flamengo",
-                    "gean.paiva@maximasistemas.com.br",
-                    "1992-12-11",
-                    "1992-12-11"
-                )
-            )*/
+            "Indefinido"
 
         )
 

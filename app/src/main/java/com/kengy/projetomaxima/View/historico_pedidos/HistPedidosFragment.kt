@@ -56,7 +56,6 @@ class HistPedidosFragment : Fragment() {
         super.onResume()
 
         if (Utils.isNetworkAvailable(context)) {
-
             getDataFromApi()
         } else {
             getDataFromBd()

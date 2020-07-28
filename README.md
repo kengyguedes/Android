@@ -1,4 +1,4 @@
-## Objetivo
+   ## Objetivo
 
 Parabéns, você passou para a segunda fase do processo seletivo da [MáximaTech](https://maximatech.com.br/) para desenvolvedor
 Android.
@@ -81,11 +81,11 @@ Os jsons utlizados nessa avaliação estão contidos nos seguintes caminhos.
 
 **GET Request -> Dados do Cliente**
 
-	URL : http://maximatech.free.beeceptor.com/android/cliente
+	URL : https://api.myjson.com/bins/1bo7qj
 
 **GET Request -> Histórico de Pedidos**
 
-	URL: http://maximatech.free.beeceptor.com/android/pedido
+	URL: https://api.myjson.com/bins/wjl97
 
 ## 5.0 - O que vamos avaliar?
 

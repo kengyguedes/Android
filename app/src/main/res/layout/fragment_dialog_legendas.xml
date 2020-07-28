@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingTop="20dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_dialog_leg_emProcess"
+        style="@style/Style_image_dialog_legendas"
+        android:src="@mipmap/ic_maxima_em_processamento"
+        app:civ_border_color="@color/black_overlay"
+        app:civ_border_width="2dp"
+        app:civ_circle_background_color="@color/black_overlay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl_titulo_status_pedido" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_pedRecusado"
+        style="@style/Style_image_dialog_legendas"
+        android:src="@mipmap/ic_maxima_critica_alerta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_emProcess" />
+
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_posiPendente"
+        style="@style/Style_image_dialog_legendas"
+        android:src="@mipmap/ic_maxima_critica_alerta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_pedRecusado" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_posiBloq"
+        style="@style/Style_image_dialog_legendas"
+        android:src="@mipmap/ic_maxima_critica_alerta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_posiPendente" />
+
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_liberado"
+        style="@style/Style_image_dialog_legendas"
+        android:src="@mipmap/ic_maxima_critica_alerta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_posiBloq" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_montado"
+        style="@style/Style_image_dialog_legendas"
+        android:src="@mipmap/ic_maxima_critica_alerta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_liberado" />
+
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_faturado"
+        style="@style/Style_image_dialog_legendas"
+        android:src="@mipmap/ic_maxima_critica_alerta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_montado" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_cancelado"
+        style="@style/Style_image_dialog_legendas"
+        android:src="@mipmap/ic_maxima_critica_alerta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_faturado" />
+
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_orcamento"
+        style="@style/Style_image_dialog_legendas"
+        android:src="@mipmap/ic_maxima_critica_alerta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_cancelado" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_retorno_erp"
+        style="@style/Style_image_dialog_criticas"
+
+        android:src="@mipmap/ic_maxima_aguardando_critica"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl_titulo_critica" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_sucesso"
+        style="@style/Style_image_dialog_criticas"
+        android:src="@mipmap/ic_maxima_critica_sucesso"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_retorno_erp" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_falha_parcial"
+        style="@style/Style_image_dialog_criticas"
+        android:src="@mipmap/ic_maxima_critica_alerta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_sucesso" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_falha_total"
+        style="@style/Style_image_dialog_criticas"
+        android:src="@mipmap/ic_maxima_legenda_cancelamento"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_falha_parcial" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_corte"
+        style="@style/Style_image_dialog_criticas"
+        android:src="@mipmap/ic_maxima_legenda_corte"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl_titulo_legendas" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_falta"
+        style="@style/Style_image_dialog_criticas"
+        android:src="@mipmap/ic_maxima_legenda_falta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl_dialog_corte" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_cancelado_erp"
+        style="@style/Style_image_dialog_criticas"
+        android:src="@mipmap/ic_maxima_legenda_cancelamento"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_falta" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_devolucao"
+        style="@style/Style_image_dialog_criticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_maxima_legenda_devolucao"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_cancelado_erp" />
+
+    <ImageView
+        android:id="@+id/img_dialog_leg_telemarketing"
+        style="@style/Style_image_dialog_criticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_maxima_legenda_telemarketing"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_devolucao" />
+
+    <TextView
+        android:id="@+id/lbl_titulo_legendas_principal"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:text="Legendas"
+        android:textSize="25sp"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_titulo_status_pedido"
+
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:text="Status do pedido no ERP"
+        app:layout_constraintTop_toBottomOf="@id/lbl_titulo_legendas_principal" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_emProcess"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sem processamento por parte do FV"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_emProcess"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_emProcess" />
+
+
+    <TextView
+        android:id="@+id/lbl_dialog_pedRecusado"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedido recusado pelo ERP"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_pedRecusado"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_pedRecusado" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_posiPendente"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posição no ERP Pendente"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_posiPendente"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_posiPendente" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_posiBloq"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posição no ERP bloqueado"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_posiBloq"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_posiBloq" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_liberado"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posição no ERP Liberado"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_liberado"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_liberado" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_montado"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posição no ERP Montado"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_montado"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_montado" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_faturado"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posição no ERP Faturado"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_faturado"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_faturado" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_cancelado"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posição no ERP Faturado"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_cancelado"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_cancelado" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_orcamento"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Orçamento"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_orcamento"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_orcamento" />
+
+    <TextView
+        android:id="@+id/lbl_titulo_critica"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crítica"
+        android:layout_marginStart="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_orcamento" />
+
+
+    <TextView
+        android:id="@+id/lbl_dialog_retorno_erp"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aguardando retorno do ERP"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_retorno_erp"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_retorno_erp" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_sucesso"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sucesso"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_sucesso"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_sucesso" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_falha_parcial"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Falha parcial"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_falha_parcial"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_falha_parcial" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_falha_total"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Falha total"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_falha_total"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_falha_total" />
+
+    <TextView
+        android:id="@+id/lbl_titulo_legendas"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:text="Legendas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dialog_leg_falha_total" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_corte"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedido sofreu corte"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_corte"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_corte" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_falta"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedido com falta"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_falta"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_falta" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_cancelado_erp"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedido cancelado no ERP"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_cancelado_erp"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_cancelado_erp" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_devolucao"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedido com devolução"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_devolucao"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_devolucao" />
+
+    <TextView
+        android:id="@+id/lbl_dialog_telemarketing"
+        style="@style/Style_txt_dialog_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedido feito pelo Telemarketing"
+        app:layout_constraintBottom_toBottomOf="@id/img_dialog_leg_telemarketing"
+        app:layout_constraintStart_toEndOf="@id/img_dialog_leg_telemarketing" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

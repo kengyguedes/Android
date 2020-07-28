@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -23,9 +24,15 @@ class DadosClienteFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
         dadosClienteViewModel =
             ViewModelProviders.of(this).get(DadosClienteViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_dados_cliente, container, false)
+
+        val appCompatActivity = activity as AppCompatActivity?
+        appCompatActivity?.supportActionBar!!.setHomeButtonEnabled(true)
+        appCompatActivity.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         return root
     }
 

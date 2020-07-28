@@ -28,6 +28,8 @@ class MenuPrincipal : AppCompatActivity(), View.OnClickListener {
 
         card_cliente.setOnClickListener(this)
 
+
+
     }
 
     override fun onClick (view : View){

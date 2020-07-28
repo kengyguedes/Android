@@ -1,18 +1,15 @@
 package com.kengy.projetomaxima.View.historico_pedidos
 
-import android.content.Context
-import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kengy.projetomaxima.R
 import com.kengy.projetomaxima.View.FragDialogLegendas
-import com.kengy.projetomaxima.database.entity.EntityLegendaPedido
-import com.kengy.projetomaxima.database.entity.EntityPedido
-import com.kengy.projetomaxima.database.entity.PedidoWithLegends
 import com.kengy.projetomaxima.utils.Utils
 import kotlinx.android.synthetic.main.fragment_hist_pedidos.*
 
@@ -27,8 +24,13 @@ class HistPedidosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _histPedViewModel = ViewModelProviders.of(this).get(HistPedidosViewModel::class.java)
-        return inflater.inflate(R.layout.fragment_hist_pedidos, container, false)
-    }
+
+        val appCompatActivity = activity as AppCompatActivity?
+        appCompatActivity?.supportActionBar!!.setHomeButtonEnabled(true)
+        appCompatActivity.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        return inflater.inflate(R.layout.fragment_hist_pedidos, container, false)}
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setHasOptionsMenu(true)
@@ -79,7 +81,6 @@ class HistPedidosFragment : Fragment() {
         })
         _histPedViewModel.getHistPedFromServer()
     }
-
 
 
 }

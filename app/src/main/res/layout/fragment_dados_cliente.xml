@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ly_dados_cli"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_tela_cards"
-    android:orientation="vertical"
-    android:id="@+id/ly_dados_cli">
-
+    android:orientation="vertical">
 
 
     <androidx.cardview.widget.CardView
@@ -44,6 +43,7 @@
                 android:id="@+id/txt_fantasia_cliente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/santral_bold"
                 android:text="DROGARIA CAMPESTRE"
                 app:layout_constraintTop_toBottomOf="@id/txt_nome_cliente" />
 
@@ -152,6 +152,30 @@
             android:padding="10dp">
 
 
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="3dp"
+                android:src="@mipmap/ic_maxima_telefone"
+                app:layout_constraintBottom_toBottomOf="@id/txt_telefone"
+                app:layout_constraintStart_toEndOf="@id/txt_telefone" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="3dp"
+                android:src="@mipmap/ic_maxima_telefone"
+                app:layout_constraintBottom_toBottomOf="@id/txt_celular"
+                app:layout_constraintStart_toEndOf="@id/txt_celular" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="3dp"
+                android:src="@mipmap/ic_maxima_email"
+                app:layout_constraintBottom_toBottomOf="@id/txt_emal"
+                app:layout_constraintStart_toEndOf="@id/txt_emal" />
+
             <TextView
                 android:id="@+id/lbl_titulo_contatos"
                 style="@style/Style_txt_dados_clientes"
@@ -184,6 +208,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_nome_contato" />
 
+
             <TextView
                 android:id="@+id/txt_telefone"
                 style="@style/Style_txt_dados_clientes"
@@ -205,7 +230,6 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_telefone" />
 
-
             <TextView
                 android:id="@+id/txt_celular"
                 style="@style/Style_txt_dados_clientes"
@@ -215,6 +239,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/lbl_celular"
                 app:layout_constraintStart_toEndOf="@+id/lbl_celular"
                 app:layout_constraintTop_toTopOf="@+id/lbl_celular" />
+
 
             <TextView
                 android:id="@+id/lbl_conjugue"
@@ -226,7 +251,6 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_celular" />
 
-
             <TextView
                 android:id="@+id/txt_conjugue"
                 style="@style/Style_txt_dados_clientes"
@@ -236,6 +260,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/lbl_conjugue"
                 app:layout_constraintStart_toEndOf="@+id/lbl_conjugue"
                 app:layout_constraintTop_toTopOf="@+id/lbl_conjugue" />
+
 
             <TextView
                 android:id="@+id/lbl_tipo"
@@ -248,7 +273,6 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_conjugue" />
 
-
             <TextView
                 android:id="@+id/txt_tipo"
                 style="@style/Style_txt_dados_clientes"
@@ -259,6 +283,7 @@
                 app:layout_constraintStart_toEndOf="@+id/lbl_tipo"
                 app:layout_constraintTop_toTopOf="@+id/lbl_tipo" />
 
+
             <TextView
                 android:id="@+id/lbl_time"
                 style="@style/Style_lbl_dados_clientes"
@@ -268,16 +293,16 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_tipo" />
 
-
             <TextView
                 android:id="@+id/txt_time"
                 style="@style/Style_txt_dados_clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3333-4444"
+                android:text="Vasco"
                 app:layout_constraintBottom_toBottomOf="@+id/lbl_time"
                 app:layout_constraintStart_toEndOf="@+id/lbl_time"
                 app:layout_constraintTop_toTopOf="@+id/lbl_time" />
+
 
             <TextView
                 android:id="@+id/lbl_email"
@@ -291,7 +316,6 @@
                 app:layout_constraintBottom_toBottomOf="@id/txt_telefone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/txt_telefone" />
-
 
             <TextView
                 android:id="@+id/txt_emal"
@@ -333,7 +357,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="200dp"
-                android:text="E-mail: "
+                android:text="Data Nasc. Conjugue: "
                 app:layout_constraintBottom_toBottomOf="@id/txt_conjugue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/txt_conjugue" />
@@ -343,7 +367,7 @@
                 style="@style/Style_txt_dados_clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="kengyysk8@gmail.com"
+                android:text="23/03/1994"
                 app:layout_constraintBottom_toBottomOf="@+id/lbl_dt_nasc_conjugue"
                 app:layout_constraintStart_toEndOf="@+id/lbl_dt_nasc_conjugue"
                 app:layout_constraintTop_toTopOf="@+id/lbl_dt_nasc_conjugue" />
@@ -355,7 +379,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="200dp"
-                android:text="Time2: "
+                android:text="Time: "
                 app:layout_constraintBottom_toBottomOf="@id/txt_tipo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/txt_tipo" />
@@ -365,7 +389,7 @@
                 style="@style/Style_txt_dados_clientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="kengyysk8@gmail.com"
+                android:text="Vasco"
                 app:layout_constraintBottom_toBottomOf="@+id/lbl_time2"
                 app:layout_constraintStart_toEndOf="@+id/lbl_time2"
                 app:layout_constraintTop_toTopOf="@+id/lbl_time2" />

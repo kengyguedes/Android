@@ -1,18 +1,26 @@
 package com.kengy.projetomaxima.Repository
 
+import android.content.Context
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.kengy.projetomaxima.api.ApiService
+import com.kengy.projetomaxima.database.MaxDataBase
+import com.kengy.projetomaxima.database.entity.ClienteWithContatos
+import com.kengy.projetomaxima.database.entity.EntityCliente
+import com.kengy.projetomaxima.database.entity.EntityContato
 import com.kengy.projetomaxima.model.Cliente
 import com.kengy.projetomaxima.model.MyCliente
+import org.jetbrains.anko.doAsync
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RepositoryCliente {
+class RepositoryCliente(context: Context) {
 
 
     val listCliente = MutableLiveData<Cliente>()
+    private var _dao = MaxDataBase.getInstance(context)
 
     fun getClienteFromServer() {
 
@@ -23,16 +31,15 @@ class RepositoryCliente {
 
                 if (response.code() == 200 && response.body() != null) {
                     Log.d("sucesso", "Requisição sucesso")
-                    var listPed = response.body()?.cliente
                     listCliente.value = response.body()?.cliente
 
-                    /* resultado?.let {
-                         it.forEach{
-                             doAsync {
-                                 database.Dao().addSingleProduct(it)
-                             }
-                         }
-                     }*/
+//                    response.let {
+//                        it.forEach {
+//                            doAsync {
+//                                _dao.Dao().savePedi(it)
+//                            }
+//                        }
+//                    }
                 }
 
             }
@@ -42,5 +49,15 @@ class RepositoryCliente {
             }
 
         })
+    }
+
+
+    fun getClientesFromBD(): LiveData<List<ClienteWithContatos>> =
+        _dao.Dao().getClienteWithContato()
+
+    fun addClientesBD(cliente: EntityCliente, listaContatos: List<EntityContato>) {
+        doAsync {
+            _dao.Dao().gravaClientesBanco(cliente, listaContatos)
+        }
     }
 }

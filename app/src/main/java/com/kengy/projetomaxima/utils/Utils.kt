@@ -12,11 +12,14 @@ import androidx.core.content.ContextCompat.getSystemService
 import com.amulyakhare.textdrawable.TextDrawable
 import com.google.android.material.snackbar.Snackbar
 import com.kengy.projetomaxima.R
+import com.kengy.projetomaxima.database.entity.EntityLegendaPedido
+import com.kengy.projetomaxima.database.entity.EntityPedido
+import com.kengy.projetomaxima.database.entity.PedidoWithLegends
 import kotlinx.android.synthetic.main.fragment_dados_cliente.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class Utils {
+object Utils {
 
     fun formatterDate(strDate: String): String {
 
@@ -71,6 +74,45 @@ class Utils {
     }
 
 
+    fun isNetworkAvailable(context: Context?): Boolean {
+        val connectivityManager = context?.getSystemService(Context.CONNECTIVITY_SERVICE)
+
+        return if (connectivityManager is ConnectivityManager) {
+            val networkInfo: NetworkInfo? = connectivityManager.activeNetworkInfo
+            networkInfo?.isConnected ?: false
+        } else false
+    }
+
+    fun convertLists(lst: List<PedidoWithLegends>): List<EntityPedido> {
+        var lstAuxPedido = mutableListOf<EntityPedido>()
+        lst.forEach {
+            lstAuxPedido.add(
+                EntityPedido(
+                    it.pedido.numero_ped_Rca
+                    ,
+                    it.pedido.numero_ped_erp
+                    ,
+                    it.pedido.codigoCliente,
+                    it.pedido.NOMECLIENTE,
+                    it.pedido.data,
+                    it.pedido.status,
+                    it.pedido.critica,
+                    it.pedido.tipo,
+                    getListLegends(it.lstLegendas)
+                )
+            )
+        }
+        return lstAuxPedido
+    }
+
+    private fun getListLegends(lstLegendas: List<EntityLegendaPedido>): List<String> {
+        var lstAux = mutableListOf<String>()
+        lstLegendas.forEach {
+            lstAux.add(it.legenda)
+        }
+        return lstAux
+
+    }
 
 
 }

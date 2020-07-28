@@ -39,7 +39,7 @@ class SplashScreen : AppCompatActivity() {
                 )
             )
             finish()
-        }, 4000)
+        }, 1000)
 
     }
 

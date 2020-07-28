@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_dados"
-        android:name="com.kengy.projetomaxima.View.ui.dados_cliente.DadosClienteFragment"
+        android:name="com.kengy.projetomaxima.View.dados_cliente.DadosClienteFragment"
         android:label="@string/title_dados"
         tools:layout="@layout/fragment_dados_cliente" />
 
     <fragment
         android:id="@+id/navigation_hist_ped"
-        android:name="com.kengy.projetomaxima.View.ui.historico_pedidos.HistPedidosFragment"
+        android:name="com.kengy.projetomaxima.View.historico_pedidos.HistPedidosFragment"
         android:label="@string/title_hist_pedidos"
         tools:layout="@layout/fragment_hist_pedidos" >
         <action
@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/navigation_alvaras"
-        android:name="com.kengy.projetomaxima.View.ui.alvaras.AlvarasFragment"
+        android:name="com.kengy.projetomaxima.View.alvaras.AlvarasFragment"
         android:label="@string/title_alvaras"
         tools:layout="@layout/fragment_alvaras" >
         <action
